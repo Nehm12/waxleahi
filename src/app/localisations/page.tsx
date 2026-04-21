@@ -1,7 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import CoverageMap from "@/components/CoverageMap";
+import dynamic from "next/dynamic";
+
+const CoverageMap = dynamic(
+  () => import("@/components/CoverageMap"),
+  {
+    ssr: false,
+    loading: () => <p>Chargement carte...</p>,
+  }
+);
 
 
 const serveredAreas = [
