@@ -5,19 +5,19 @@ import Link from "next/link";
 const teamMembers = [
   {
     id: 1,
-    name: "Ahmed Hassan",
-    role: "Fondateur & Directeur",
+    name: "Wilfried ",
+    role: "Co-Founder",
     description: "Visionnaire passionné par l'aide aux seniors et aux personnes en difficulté. 15 ans d'expérience dans le service à la personne.",
     specialties: ["Stratégie", "Leadership", "Service Client"],
     image: "/team/ahmed.jpg",
   },
   {
     id: 2,
-    name: "Fatima El Mansouri",
-    role: "Responsable Logistique",
-    description: "Experte en organisation et gestion des livraisons. Garantit que chaque commande arrive à temps et en parfait état.",
-    specialties: ["Logistique", "Organisation", "Qualité"],
-    image: "/team/fatima.jpg",
+    name: "Nehm Hounga",
+    role: "Co-Founder et CEO",
+    description: "Experte en organisation et Leadership Entrepreneurial. Garantit que chaque commande arrive à temps et en parfait état.",
+    specialties: ["Stratégie", "Leadership", "Service Client"],
+    image: "/team/nehm.png",
   },
   {
     id: 3,
