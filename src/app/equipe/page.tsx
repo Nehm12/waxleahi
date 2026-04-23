@@ -17,7 +17,7 @@ const teamMembers = [
     id: 2,
     name: "Nehm ",
     role: "Co-Founder et CEO",
-    description: "Experte en organisation et Leadership Entrepreneurial. Garantit que chaque commande arrive à temps et en parfait état.",
+    description: "Visionnaire expert en organisation et Leadership Entrepreneurial. Garantit que chaque commande arrive à temps et en parfait état.",
     specialties: ["Stratégie", "Leadership", "Service Client"],
     image: "/team/nehm.png",
     linkedin: "https://linkedin.com/in/nehm-hounga",
@@ -27,22 +27,22 @@ const teamMembers = [
 const values = [
   {
     title: "Disponibilité",
-    description: "24h/24, 7j/7, même les jours fériés et la nuit.",
+    description: "Parce que l'urgence n'attend pas, nous restons à votre service à chaque instant. Que ce soit à l'aube, au milieu de la nuit ou un jour de fête, notre engagement envers vous ne connaît pas d'interruption.",
     icon: "clock",
   },
   {
     title: "Humanité",
-    description: "Chaque client est important, chaque geste compte.",
+    description: "Au-delà de la livraison, c'est le lien social qui nous anime. Nous traitons chaque demande avec la bienveillance et l'attention que l'on porte à un proche. Votre sourire est notre véritable récompense.",
     icon: "heart",
   },
   {
     title: "Fiabilité",
-    description: "Vous pouvez compter sur nous, à chaque fois.",
+    description: "La confiance est le socle de notre relation. En nous confiant vos courses ou vos médicaments, vous choisissez la sérénité. Nous faisons de chaque promesse tenue une question d'honneur.",
     icon: "check",
   },
   {
     title: "Qualité",
-    description: "Nous respectons vos choix et vos préférences.",
+    description: "L'exigence est notre standard. Nous ne nous contentons pas de livrer, nous sélectionnons le meilleur. Vos préférences sont respectées avec une précision artisanale, car vous méritez l'excellence.",
     icon: "star",
   },
 ];

@@ -76,7 +76,7 @@ export default function Home() {
               
               <h3 className="text-2xl font-bold text-brand-dark mb-4">Disponibilité 24/7</h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Nous sommes toujours là pour vous, même la nuit et les jours fériés. Votre besoin, notre priorité.
+                Nous demeurons à votre entière disposition, de jour comme de nuit, y compris les jours fériés. Votre satisfaction constitue notre priorité absolue.
               </p>
               <div className="flex items-center text-brand-orange font-semibold group-hover:translate-x-2 transition-transform">
                 <span>En savoir plus</span>
@@ -100,7 +100,7 @@ export default function Home() {
               
               <h3 className="text-2xl font-bold text-brand-dark mb-4">Service Premium</h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Équipe bienveillante et expérimentée. Sélection minutieuse pour votre satisfaction garantie.
+               Une équipe à la fois bienveillante et hautement qualifiée, opérant une sélection rigoureuse afin de vous garantir une satisfaction optimale.
               </p>
               <div className="flex items-center text-brand-orange font-semibold group-hover:translate-x-2 transition-transform">
                 <span>En savoir plus</span>
@@ -124,7 +124,7 @@ export default function Home() {
               
               <h3 className="text-2xl font-bold text-brand-dark mb-4">Rapide & Fiable</h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Livraison express, tarifs transparents, sans minimum de commande. L'efficacité au service du client.
+                Livraison express, tarifs accessibles à tous, sans exigence de commande minimale. L'efficacité pleinement dédiée à votre satisfaction.
               </p>
               <div className="flex items-center text-brand-orange font-semibold group-hover:translate-x-2 transition-transform">
                 <span>En savoir plus</span>
@@ -235,8 +235,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-brand-dark mb-3">Courses au Supermarché</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">Accès à Carrefour, Auchan et autres enseignes. Sélection de vos produits préférés livrés rapidement.</p>
-                
+                <p className="text-gray-600 leading-relaxed mb-6">Vous n'avez pas le temps de sortir ? Nous nous rendons dans vos enseignes préférées pour récupérer vos produits et vous les ramener au pas de la porte.</p>
                 <Link href="/contact" className="inline-flex items-center text-brand-orange font-semibold hover:text-orange-600 group-hover:translate-x-2 transition-transform">
                   <span>Demander ce service</span>
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -257,7 +256,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-brand-dark mb-3">Pharmacie & Médicaments</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">Accès aux pharmacies de garde 24h/24. Livraison urgente de médicaments et produits de santé.</p>
+                <p className="text-gray-600 leading-relaxed mb-6">Accédez aux pharmacies 24h/24 sans quitter votre domicile. Nous récupérons vos médicaments et vous les livrons en urgence dans le respect total de votre confidentialité.</p>
                 
                 <Link href="/contact" className="inline-flex items-center text-brand-orange font-semibold hover:text-orange-600 group-hover:translate-x-2 transition-transform">
                   <span>Demander ce service</span>

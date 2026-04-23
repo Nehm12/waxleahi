@@ -8,8 +8,8 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { href: "/", label: "Accueil" },
-    { href: "/equipe", label: "Équipe" },
+    { href: "/", label: "Qui sommes-nous ?" },
+    { href: "/equipe", label: "Notre Équipe" },
     { href: "/localisations", label: "Localisations" },
     { href: "/application-mobile", label: "Application mobile" },
     { href: "/contact", label: "Contact" },
