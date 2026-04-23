@@ -406,7 +406,7 @@ export default function LocalisationsPage() {
             Commandez dès maintenant via WhatsApp
           </p>
           <a
-            href="https://wa.me/22967123456"
+            href="https://wa.me/0144456703"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-brand-orange hover:bg-orange-600 text-white font-semibold py-2.5 px-8 rounded-lg transition-all text-sm"

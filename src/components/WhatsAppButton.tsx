@@ -1,7 +1,7 @@
 "use client";
 
 export default function WhatsAppButton() {
-  const whatsappNumber = "22967123456"; // Numéro Bénin
+  const whatsappNumber = "0144456703"; // Numéro Bénin
   const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
   return (

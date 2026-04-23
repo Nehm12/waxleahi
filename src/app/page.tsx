@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="flex-1">
       {/* Hero Section with Local Image */}
-      <section className="relative h-96 md:h-screen bg-cover bg-center overflow-hidden">
+      <section className="relative min-h-96 md:h-screen bg-cover bg-center overflow-hidden">
         <img
           src="/hero.jpg"
           alt="Service de livraison express à domicile"
@@ -15,7 +15,7 @@ export default function Home() {
         
         <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/85 to-brand-dark/50"></div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center py-16 sm:py-0">
           <div className="w-full md:w-1/2">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-light mb-6 leading-tight">
               Vos courses à domicile
@@ -26,7 +26,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="https://wa.me/22967123456"
+                href="https://wa.me/0144456703"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-brand-orange hover:bg-brand-orange/90 text-white font-bold py-4 px-8 rounded-lg transition-all hover:shadow-lg text-center"
@@ -347,7 +347,7 @@ export default function Home() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
-              href="https://wa.me/22967123456"
+              href="https://wa.me/0144456703"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center justify-center bg-brand-orange hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-xl transition-all hover:shadow-2xl hover:shadow-brand-orange/50"

@@ -60,14 +60,14 @@ export default function ContactPage() {
                 Le moyen le plus rapide. Réponse instantanée, disponible 24h/24.
               </p>
               <a
-                href="https://wa.me/22967123456"
+                href="https://wa.me/0144456703"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-lg transition-all"
               >
                 Écrire sur WhatsApp
               </a>
-              <p className="text-sm text-gray-600 mt-4 font-semibold">+229 67 12 34 56</p>
+              <p className="text-sm text-gray-600 mt-4 font-semibold">+229 01 44 45 67 03</p>
             </div>
 
             {/* Phone */}
@@ -82,7 +82,7 @@ export default function ContactPage() {
                 Appelez-nous directement pour une conversation personnalisée.
               </p>
               <a
-                href="tel:+22967123456"
+                href="tel:+2290144456703"
                 className="inline-block bg-brand-dark hover:bg-brand-dark/90 text-white font-bold py-2 px-6 rounded-lg transition-all"
               >
                 Appeler Maintenant
@@ -102,12 +102,12 @@ export default function ContactPage() {
                 Envoyez-nous vos questions ou commentaires par email.
               </p>
               <a
-                href="mailto:contact@waxleahi.com"
+                href="mailto:waxleahi@gmail.com"
                 className="inline-block bg-brand-orange hover:bg-brand-orange/90 text-white font-bold py-2 px-6 rounded-lg transition-all"
               >
                 Envoyer Email
               </a>
-              <p className="text-sm text-gray-600 mt-4 font-semibold">contact@waxleahi.com</p>
+              <p className="text-sm text-gray-600 mt-4 font-semibold">waxleahi@gmail.com</p>
             </div>
           </div>
         </div>
@@ -281,7 +281,7 @@ export default function ContactPage() {
             Notre équipe est disponible 24h/24 sur WhatsApp
           </p>
           <a
-            href="https://wa.me/22967123456"
+            href="https://wa.me/0144456703"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-10 rounded-lg transition-all hover:shadow-lg text-lg"

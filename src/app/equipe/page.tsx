@@ -1,39 +1,26 @@
 "use client";
 
+
 import Link from "next/link";
 
 const teamMembers = [
   {
     id: 1,
-    name: "Wilfried ",
+    name: "Wilfried",
     role: "Co-Founder",
     description: "Visionnaire passionné par l'aide aux seniors et aux personnes en difficulté. 15 ans d'expérience dans le service à la personne.",
     specialties: ["Stratégie", "Leadership", "Service Client"],
-    image: "/team/ahmed.jpg",
+    image: "/team/wilfried.jpg",
+    linkedin: "https://linkedin.com/in/wilfried",
   },
   {
     id: 2,
-    name: "Nehm Hounga",
+    name: "Nehm ",
     role: "Co-Founder et CEO",
     description: "Experte en organisation et Leadership Entrepreneurial. Garantit que chaque commande arrive à temps et en parfait état.",
     specialties: ["Stratégie", "Leadership", "Service Client"],
     image: "/team/nehm.png",
-  },
-  {
-    id: 3,
-    name: "Marc Dubois",
-    role: "Responsable Client",
-    description: "Dédié à écouter et satisfaire les besoins de chaque client. Support disponible 24h/24 sur tous les canaux.",
-    specialties: ["Support", "Communication", "Empathie"],
-    image: "/team/marc.jpg",
-  },
-  {
-    id: 4,
-    name: "Amina Benali",
-    role: "Coordinatrice Livraison",
-    description: "Garantit que chaque livraison est ponctuelle et soignée. Formation continue de nos livreurs.",
-    specialties: ["Livraison", "Coordination", "Fiabilité"],
-    image: "/team/amina.jpg",
+    linkedin: "https://linkedin.com/in/nehm-hounga",
   },
 ];
 
@@ -160,61 +147,79 @@ export default function EquipePage() {
         </div>
       </section>
 
-      {/* Team Members Section */}
+      {/* Team Members Section - Fondateurs en vedette */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-brand-light">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <span className="inline-block px-3 py-1 bg-brand-orange/10 text-brand-orange font-semibold text-xs rounded-full mb-3">
               NOTRE ÉQUIPE
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-4">
-              Nos Professionnels
+              Nos Fondateurs
             </h2>
             <p className="text-gray-600 max-w-xl mx-auto text-sm leading-relaxed">
-              Une équipe de spécialistes dédiée à votre satisfaction et votre bien-être
+              Les visionnaires derrière WA XLE AHI, passionnés par votre bien-être
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {teamMembers.map((member) => (
-              <div
-                key={member.id}
-                className="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-brand-orange/40"
-              >
-                <div className="relative h-56 overflow-hidden bg-gray-300">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-
-                <div className="p-5">
-                  <div className="mb-3">
-                    <h3 className="text-lg font-bold text-brand-dark">{member.name}</h3>
-                    <p className="text-brand-orange font-semibold text-xs">{member.role}</p>
+          <div className="flex justify-center">
+            <div className="grid md:grid-cols-2 gap-8 max-w-3xl w-full">
+              {teamMembers.map((member) => (
+                <div
+                  key={member.id}
+                  className="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-brand-orange/40"
+                >
+                  <div className="relative h-72 overflow-hidden bg-gray-300">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
                   </div>
 
-                  <p className="text-gray-600 text-xs leading-relaxed mb-4 line-clamp-2">
-                    {member.description}
-                  </p>
+                  <div className="p-6">
+                    <div className="mb-3">
+                      <h3 className="text-2xl font-bold text-brand-dark">{member.name}</h3>
+                      <p className="text-brand-orange font-semibold text-sm">{member.role}</p>
+                    </div>
 
-                  <div className="space-y-2">
-                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Spécialités</p>
-                    <div className="flex flex-wrap gap-1">
-                      {member.specialties.map((specialty) => (
-                        <span
-                          key={specialty}
-                          className="px-2 py-0.5 bg-brand-orange/10 text-brand-orange text-xs font-medium rounded"
+                    <p className="text-gray-600 text-sm leading-relaxed mb-5">
+                      {member.description}
+                    </p>
+
+                    <div className="space-y-3">
+                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Spécialités</p>
+                      <div className="flex flex-wrap gap-2">
+                        {member.specialties.map((specialty) => (
+                          <span
+                            key={specialty}
+                            className="px-3 py-1 bg-brand-orange/10 text-brand-orange text-xs font-medium rounded-full"
+                          >
+                            {specialty}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="flex gap-2 mt-6 pt-6 border-t border-gray-200">
+                      {member.linkedin && (
+                        <a
+                          href={member.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 inline-flex items-center justify-center bg-brand-orange hover:bg-orange-600 text-white font-semibold py-3 px-4 rounded-lg transition-all hover:shadow-lg text-sm"
                         >
-                          {specialty}
-                        </span>
-                      ))}
+                          <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.731-2.004 1.438-.103.249-.129.597-.129.946v5.421h-3.554s.047-8.733 0-9.635h3.554v1.366c.43-.664 1.199-1.608 2.928-1.608 2.136 0 3.745 1.394 3.745 4.389v5.488zM5.337 9.433c-1.144 0-1.915-.762-1.915-1.715 0-.953.77-1.715 1.958-1.715 1.188 0 1.915.762 1.915 1.715 0 .953-.727 1.715-1.958 1.715zm1.582 11.019H3.656V9.797h3.263v10.655zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+                          </svg>
+                          LinkedIn
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -270,7 +275,7 @@ export default function EquipePage() {
             Contactez-nous via WhatsApp pour vos premières courses
           </p>
           <a
-            href="https://wa.me/22967123456"
+            href="https://wa.me/0144456703"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-brand-orange hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-all hover:shadow-lg text-sm"
