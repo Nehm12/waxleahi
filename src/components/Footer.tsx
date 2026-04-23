@@ -2,10 +2,15 @@
 
 import Link from "next/link";
 import Image from "next/image";
-
+import { useTranslation } from "@/lib/useTranslation";
+import { useState, useEffect } from "react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { language, switchLanguage, t, mounted } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
+
+  if (!mounted) return null;
 
   return (
     <footer className="bg-brand-dark text-brand-light">
@@ -24,12 +29,12 @@ export default function Footer() {
               <span>WA XLE AHI</span>
             </div>
             <p className="text-brand-light/80 text-sm leading-relaxed mb-6">
-              Service de courses à domicile 24h/24, 7j/7 pour seniors, PMR et personnes en difficulté.
+              {t("footer.description")}
             </p>
             {/* Social Networks - Improved Icons */}
             <div className="flex gap-3">
               <a
-                href="https://facebook.com/profile.php?id=61573290561776"
+                href="https://facebook.com/waxleahi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-brand-orange/20 hover:bg-brand-orange/40 rounded-lg flex items-center justify-center text-brand-orange transition-all duration-300 hover:scale-110"
@@ -66,36 +71,36 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h3 className="font-bold text-lg mb-4 text-brand-orange">Navigation</h3>
+            <h3 className="font-bold text-lg mb-4 text-brand-orange">{t("footer.navigation")}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="text-brand-light/80 hover:text-brand-orange transition-colors text-sm">
-                  Accueil
+                  {t("nav.home")}
                 </Link>
               </li>
               <li>
                 <Link href="/equipe" className="text-brand-light/80 hover:text-brand-orange transition-colors text-sm">
-                  Équipe
+                  {t("nav.team")}
                 </Link>
               </li>
               <li>
                 <Link href="/carriere" className="text-brand-light/80 hover:text-brand-orange transition-colors text-sm">
-                  Carrière
+                  {t("nav.careers")}
                 </Link>
               </li>
               <li>
                 <Link href="/localisations" className="text-brand-light/80 hover:text-brand-orange transition-colors text-sm">
-                  Zones Desservies
+                  {t("nav.locations")}
                 </Link>
               </li>
               <li>
                 <Link href="/application-mobile" className="text-brand-light/80 hover:text-brand-orange transition-colors text-sm">
-                  Application
+                  {t("nav.app")}
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-brand-light/80 hover:text-brand-orange transition-colors text-sm">
-                  Contact
+                  {t("nav.contact")}
                 </Link>
               </li>
             </ul>
@@ -103,7 +108,7 @@ export default function Footer() {
 
           {/* Zones */}
           <div>
-            <h3 className="font-bold text-lg mb-4 text-brand-orange">Zones Desservies</h3>
+            <h3 className="font-bold text-lg mb-4 text-brand-orange">{t("footer.zones")}</h3>
             <ul className="space-y-2 text-sm">
               <li className="text-brand-light/80">▪ Cotonou</li>
               <li className="text-brand-light/80">▪ Calavi</li>
@@ -112,30 +117,76 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact & Info */}
+          {/* Contact & Language */}
           <div>
-            <h3 className="font-bold text-lg mb-4 text-brand-orange">Contact</h3>
-            <div className="space-y-3 text-sm">
+            <h3 className="font-bold text-lg mb-4 text-brand-orange">{t("footer.contact")}</h3>
+            <div className="space-y-3 text-sm mb-6">
               <div className="text-brand-light/80">
-                <p className="font-semibold mb-1">WhatsApp</p>
+                <p className="font-semibold mb-1">{t("footer.whatsapp")}</p>
                 <a href="https://wa.me/0144456703" target="_blank" rel="noopener noreferrer" className="text-brand-orange hover:text-brand-orange/80 transition-colors">
                   01 44 45 67 03
                 </a>
               </div>
               <div className="text-brand-light/80">
-                <p className="font-semibold mb-1">Email</p>
+                <p className="font-semibold mb-1">{t("footer.email")}</p>
                 <a href="mailto:waxleahi@gmail.com" className="text-brand-orange hover:text-brand-orange/80 transition-colors">
                   waxleahi@gmail.com
                 </a>
               </div>
+            </div>
+
+            {/* Language Switcher */}
+            <div className="relative">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="w-full flex items-center justify-between gap-2 px-3 py-2 bg-brand-orange/20 hover:bg-brand-orange/30 rounded-lg text-brand-orange transition-all"
+              >
+                <span className="flex items-center gap-2">
+                  <span>{language === 'fr' ? '🇫🇷' : '🇬🇧'}</span>
+                  <span className="text-sm font-semibold">{t("common.language")}</span>
+                </span>
+                <svg className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </button>
+
+              {/* Dropdown Menu */}
+              {isOpen && (
+                <div className="absolute bottom-full left-0 right-0 mb-2 bg-brand-dark border border-brand-orange/30 rounded-lg overflow-hidden shadow-lg">
+                  <button
+                    onClick={() => {
+                      switchLanguage('fr');
+                      setIsOpen(false);
+                    }}
+                    className={`w-full text-left px-3 py-2 flex items-center gap-2 transition-colors ${
+                      language === 'fr' ? 'bg-brand-orange/20 text-brand-orange' : 'text-brand-light/80 hover:text-brand-orange'
+                    }`}
+                  >
+                    <span>🇫🇷</span>
+                    <span>{t("common.french")}</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      switchLanguage('en');
+                      setIsOpen(false);
+                    }}
+                    className={`w-full text-left px-3 py-2 flex items-center gap-2 transition-colors ${
+                      language === 'en' ? 'bg-brand-orange/20 text-brand-orange' : 'text-brand-light/80 hover:text-brand-orange'
+                    }`}
+                  >
+                    <span>🇬🇧</span>
+                    <span>{t("common.english")}</span>
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>
 
         <div className="border-t border-brand-light/20 pt-8">
           <div className="text-center text-brand-light/60 text-sm">
-            <p>&copy; {currentYear} WA XLE AHI. Tous droits réservés.</p>
-            <p className="mt-2">Service de courses à domicile • 24h/24 • 7j/7</p>
+            <p>&copy; {currentYear} WA XLE AHI. {t("footer.copyright")}</p>
+            <p className="mt-2">{t("footer.service")}</p>
           </div>
         </div>
       </div>
