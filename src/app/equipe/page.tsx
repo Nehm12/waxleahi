@@ -15,12 +15,12 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Nehm ",
+    name: " Eric",
     role: "Co-Founder et CEO",
     description: "Visionnaire expert en organisation et Leadership Entrepreneurial. Garantit que chaque commande arrive à temps et en parfait état.",
     specialties: ["Stratégie", "Leadership", "Service Client"],
-    image: "/team/nehm.png",
-    linkedin: "https://linkedin.com/in/nehm-hounga",
+    image: "/team/eric.jpg",
+    linkedin: "",
   },
 ];
 
